@@ -44,7 +44,7 @@ impl Coffee for MilkDecorator {
         format!("{} ,with  Milk", self.coffee.desc())
     }
 }
-impl CoffeeDecorator for MilkDecorator{}
+
 
 //SugarDecorator【具体装饰器（Concrete Decorator）】
 struct SugarDecorator {
@@ -70,8 +70,10 @@ impl Coffee for SugarDecorator {
         format!("{} ,with  Sugar", self.coffee.desc())
     }
 }
-impl CoffeeDecorator for SugarDecorator {
+//避免为SugarDecorator，MilkDecorator反复实现CoffeeDecorator
+impl <T:Coffee> CoffeeDecorator for T {  
 }
+
 #[test]
 fn main() {
     //普通咖啡
