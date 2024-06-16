@@ -56,7 +56,7 @@ impl HomeTheaterFacade {
     fn watch_movie(&self) {
         println!("开始看电影");
         self.lights.turn_off();
-        self.projector.turn_off();
+        self.projector.turn_on();
         self.stereo.turn_on();
     }
 
