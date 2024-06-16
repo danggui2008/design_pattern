@@ -20,7 +20,7 @@ impl OperatingSystem for LinuxOS {
     }
 }
 
-//应用程序【具体产品（Concrete Product）】
+//应用程序【抽象产品（Abstract Product）】
 trait Application {
     fn open(&self);
 }
