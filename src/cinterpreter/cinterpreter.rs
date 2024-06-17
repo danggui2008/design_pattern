@@ -76,7 +76,7 @@ fn main() {
     let number_expression = NumberExpression::new(3);
     //(10-3)
     let sub_expression = SubExpression::new(NumberExpression::new(10), NumberExpression::new(3));
-    //5+(10-3)
+    //3+(10-3)
     let add_expression = AddExpression::new(number_expression, sub_expression);
     //10
     let value = add_expression.interpret();
